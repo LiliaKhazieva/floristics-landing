@@ -1,0 +1,412 @@
+@import url("./reset.css");
+
+body {
+  font-size: 22px;
+  min-width: 320px;
+  line-height: 1.65;
+  font-family: "Forum", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  transition: color 0.4s ease;
+}
+
+a:hover {
+  color: #b5b0b0;
+}
+
+.container {
+  max-width: 1730px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+#banner {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* #banner .scroll {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#header a:not(:last-child) {
+  padding-bottom: 9px;
+}
+
+#header > ul {
+  display: flex;
+  gap: 60px;
+  text-transform: uppercase;
+}
+
+.main {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-image: url("./img/Rectangle\ 9.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.main-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin: 0 auto;
+}
+
+.main-banner h1 {
+  font-size: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1;
+  width: 100%;
+}
+
+.main-banner button {
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  padding: 19px 30px;
+  margin-bottom: 100px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.text_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text_wrapper > span {
+  transform: rotate(90deg);
+}
+
+.text_wrapper > img {
+  width: 15px;
+  height: 20px;
+}
+
+.catalog {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-color: #3b181e;
+}
+
+.section-title {
+  position: relative;
+  margin: 0;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 33px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.section-title::after {
+  display: block;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  position: absolute;
+  width: 85px;
+  height: 1px;
+  background-color: #fff;
+}
+
+.catalog-title-shadow {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  font-weight: normal;
+  font-size: 180px;
+  line-height: 220px;
+  color: rgb(255, 255, 255, 0.03);
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.catalog-list {
+  padding-top: 120px;
+  position: relative;
+  display: flex;
+  gap: 40px;
+}
+
+.catalog-column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.catalog-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 10px 10px 20px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.catalog-item-title {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.catalog-item .wrapper-number {
+  z-index: 2;
+  position: absolute;
+  top: 20px;
+  left: 10%;
+}
+
+.wrapper-number span {
+  display: inline-block;
+  background-color: #fff;
+  width: 40px;
+  height: 1px;
+  margin-left: 5px;
+}
+
+.catalog-item img {
+  filter: brightness(0.7);
+  object-fit: cover;
+  width: 100%;
+}
+
+.catalog-item-3 img {
+  min-height: 600px;
+}
+
+.catalog-item-5 img,
+.catalog-item-8 img {
+  min-height: 370px;
+}
+
+.catalog-item-7 img,
+.catalog-item-4 img,
+.catalog-item-6 img {
+  max-height: 146px;
+}
+
+.promo {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  background-color: #3b181e;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+.promo-block {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.promo-block h3 {
+  text-transform: uppercase;
+  font-size: 35px;
+}
+
+.promo-block button {
+  font-size: 18px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  padding: 19px 10px;
+}
+
+.portfolio {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  background-color: #3b181e;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.portfolio img {
+  width: 50%;
+}
+
+.portfolio-block {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.portfolio-block h3 {
+  text-transform: uppercase;
+  font-size: 35px;
+}
+
+.portfolio-block button {
+  font-size: 18px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  padding: 19px 40px;
+}
+
+.wrapper-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.wrapper-images img {
+  max-width: 123px;
+  max-height: 123px;
+}
+
+.gift {
+  background-color: #3b181e;
+}
+
+.gift-cards {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.gift-card {
+  border-radius: 8px 8px 0 0;
+  background-color: #281014;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 40px;
+  width: 348px;
+  height: 574px;
+}
+
+.gift-card:hover .gift-card-wrapper {
+  cursor: pointer;
+  background-color: #262835;
+  transition: all 0.5s ease;
+  transform: scale(0.9);
+}
+
+.gift-card-big {
+  width: 420px;
+  height: 694px;
+}
+
+.gift-card-text {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  gap: 30px;
+}
+
+.gift-card-text p {
+  font-size: 20px;
+}
+
+.gift-card-text button {
+  font-size: 16px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  padding: 19px 40px;
+}
+.gift-card-text button:hover {
+  opacity: 0.8;
+}
+
+.gift-card-wrapper {
+  transition: all 0.5s ease;
+  border-radius: 8px;
+  position: relative;
+  background: url("./img/Group\ 10.png") right bottom no-repeat,
+    url("./img/лого.svg") center no-repeat, url("./img/Group.png") no-repeat,
+    #0a0a0e;
+  height: 219px;
+}
+
+.gift-card-wrapper-big {
+  margin-bottom: 20px;
+  height: 264px;
+}
+
+.gift-card-wrapper .gift-price {
+  position: absolute;
+  bottom: 0;
+  left: 3%;
+}
+
+.gift-card-wrapper .gift-number {
+  position: absolute;
+  top: 0;
+  right: 3%;
+}
+
+.providers {
+  padding-top: 80px;
+  padding-bottom: 120px;
+  background-color: #3b181e;
+}
+
+.providers-block {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.providers-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
