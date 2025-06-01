@@ -1,7 +1,7 @@
 @import url("./reset.css");
 
 body {
-  font-size: 22px;
+  font-size: 18px;
   min-width: 320px;
   line-height: 1.65;
   font-family: "Forum", serif;
@@ -21,7 +21,7 @@ a:hover {
 
 .container {
   max-width: 1730px;
-  padding: 0 40px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -39,23 +39,51 @@ a:hover {
   transform: translate(-50%, -50%);
 } */
 
+/* header */
+
 #header {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: center;
+  text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-#header a:not(:last-child) {
-  padding-bottom: 9px;
-}
-
-#header > ul {
+.header-list {
   display: flex;
-  gap: 60px;
+  gap: 40px;
   text-transform: uppercase;
 }
+
+.burger-button {
+  display: none;
+}
+
+@media (max-width: 1090px) {
+  .header-list {
+    gap: 20px;
+    font-size: 16px;
+  }
+  .logo {
+    width: 100px;
+  }
+}
+
+@media (max-width: 900px) {
+  #header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .header-list {
+    display: none;
+  }
+  .burger-button {
+    display: block;
+  }
+}
+
+/* main */
 
 .main {
   padding-top: 100px;
@@ -85,7 +113,7 @@ a:hover {
 }
 
 .main-banner h1 {
-  font-size: 100px;
+  font-size: 8vw;
   text-align: center;
   text-transform: uppercase;
   line-height: 1;
@@ -119,6 +147,8 @@ a:hover {
   width: 15px;
   height: 20px;
 }
+
+/* catalog */
 
 .catalog {
   padding-top: 150px;
@@ -154,10 +184,8 @@ a:hover {
   position: absolute;
   z-index: 2;
   top: 0;
-  left: 0;
-  font-weight: normal;
-  font-size: 180px;
-  line-height: 220px;
+  left: 3%;
+  font-size: 12vw;
   color: rgb(255, 255, 255, 0.03);
   text-align: center;
   letter-spacing: 0.06em;
@@ -165,7 +193,7 @@ a:hover {
 }
 
 .catalog-list {
-  padding-top: 120px;
+  padding-top: 10%;
   position: relative;
   display: flex;
   gap: 40px;
@@ -175,6 +203,33 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+
+@media (max-width: 900px) {
+  .catalog-list {
+    flex-direction: column;
+  }
+  .catalog-column {
+    flex-direction: row;
+  }
+
+  .catalog-item {
+    width: 50%;
+    height: 50%;
+  }
+
+  .catalog-title-shadow {
+    font-size: 11vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .catalog-column {
+    flex-direction: column;
+  }
+  .catalog-item {
+    width: 100%;
+  }
 }
 
 .catalog-item {
@@ -227,6 +282,8 @@ a:hover {
   max-height: 146px;
 }
 
+/* promo */
+
 .promo {
   display: flex;
   text-align: center;
@@ -237,6 +294,7 @@ a:hover {
   padding-top: 50px;
   padding-bottom: 100px;
 }
+
 .promo-block {
   display: flex;
   flex-direction: column;
@@ -256,6 +314,28 @@ a:hover {
   padding: 19px 10px;
 }
 
+.promo img {
+  width: 60%;
+}
+
+@media (max-width: 1000px) {
+  .promo-block h3 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 800px) {
+  .promo {
+    flex-direction: column;
+  }
+
+  .promo img {
+    width: 100%;
+  }
+}
+
+/* portfolio */
+
 .portfolio {
   display: flex;
   text-align: center;
@@ -272,6 +352,7 @@ a:hover {
 }
 
 .portfolio-block {
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -300,13 +381,49 @@ a:hover {
 .wrapper-images img {
   max-width: 123px;
   max-height: 123px;
+  min-width: 60px;
 }
+
+@media (max-width: 800px) {
+  .portfolio {
+    flex-direction: column-reverse;
+  }
+
+  .portfolio img {
+    width: 100%;
+  }
+
+  .portfolio-block {
+    width: 100%;
+  }
+
+  .portfolio-block h3 {
+    order: 2;
+    font-size: 22px;
+  }
+
+  .portfolio-block p {
+    order: 3;
+    font-size: 18px;
+  }
+
+  .portfolio-block button {
+    order: 4;
+  }
+
+  .wrapper-images {
+    order: 1;
+  }
+}
+
+/* gift */
 
 .gift {
   background-color: #3b181e;
 }
 
 .gift-cards {
+  flex-wrap: wrap;
   padding-top: 80px;
   padding-bottom: 80px;
   display: flex;
@@ -322,8 +439,8 @@ a:hover {
   flex-direction: column;
   text-align: center;
   gap: 40px;
-  width: 348px;
-  height: 574px;
+  max-width: 348px;
+  max-height: 574px;
 }
 
 .gift-card:hover .gift-card-wrapper {
@@ -389,6 +506,8 @@ a:hover {
   right: 3%;
 }
 
+/* providers */
+
 .providers {
   padding-top: 80px;
   padding-bottom: 120px;
@@ -401,12 +520,29 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   gap: 20px;
 }
 
 .providers-row {
+  flex-wrap: wrap;
   display: flex;
   gap: 20px;
   justify-content: center;
   width: 100%;
+}
+
+/* footer */
+
+.footer {
+  background-color: #3b181e;
+  border-top: 1px solid #676565;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }
