@@ -8,21 +8,19 @@ body {
   font-weight: 400;
   font-style: normal;
   color: #fff;
-}
-
-a {
-  color: #fff;
-  transition: color 0.4s ease;
-}
-
-a:hover {
-  color: #b5b0b0;
+  background-color: #3b181e;
 }
 
 .container {
   max-width: 1730px;
-  padding: 0 20px;
+  padding: 0 40px;
   margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 0 10px;
+  }
 }
 
 #banner {
@@ -32,12 +30,26 @@ a:hover {
   background-repeat: no-repeat;
 }
 
-/* #banner .scroll {
-  position: absolute;
-  bottom: 5%;
+.general-title {
+  position: relative;
+  font-size: 30px;
+  line-height: 33px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.general-title::after {
+  display: block;
+  bottom: 0;
   left: 50%;
   transform: translate(-50%, -50%);
-} */
+  content: "";
+  position: absolute;
+  width: 85px;
+  height: 1px;
+  background-color: #fff;
+}
 
 /* header */
 
@@ -85,99 +97,47 @@ a:hover {
 
 /* main */
 
-.main {
-  padding-top: 100px;
-  padding-bottom: 50px;
-}
-
-.main::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-size: contain;
-  background-image: url("./img/Rectangle\ 9.png");
-  background-repeat: no-repeat;
-  background-position: bottom;
-}
-
-.main-banner {
+.banner-title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 80px;
   margin: 0 auto;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
-.main-banner h1 {
-  font-size: 8vw;
+.banner-title h1 {
+  font-size: 7vw;
   text-align: center;
   text-transform: uppercase;
   line-height: 1;
   width: 100%;
 }
 
-.main-banner button {
+.banner-title button {
   text-transform: uppercase;
   border: 1px solid #fff;
   padding: 19px 30px;
-  margin-bottom: 100px;
 }
 
-.wrapper {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
+@media (max-width: 900px) {
+  .banner-title {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    gap: 50px;
+  }
+  .banner-title button {
+    font-size: 12px;
+    padding: 15px 15px;
+  }
 }
-
-.text_wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.text_wrapper > span {
-  transform: rotate(90deg);
-}
-
-.text_wrapper > img {
-  width: 15px;
-  height: 20px;
-}
-
 /* catalog */
 
 .catalog {
-  padding-top: 150px;
-  padding-bottom: 150px;
-  background-color: #3b181e;
-}
-
-.section-title {
-  position: relative;
-  margin: 0;
-  font-weight: normal;
-  font-size: 30px;
-  line-height: 33px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-align: center;
-  padding-bottom: 20px;
-}
-
-.section-title::after {
-  display: block;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  content: "";
-  position: absolute;
-  width: 85px;
-  height: 1px;
-  background-color: #fff;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .catalog-title-shadow {
@@ -205,7 +165,11 @@ a:hover {
   gap: 40px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+  .catalog {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
   .catalog-list {
     flex-direction: column;
   }
@@ -224,11 +188,19 @@ a:hover {
 }
 
 @media (max-width: 500px) {
+  .catalog {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
   .catalog-column {
     flex-direction: column;
   }
   .catalog-item {
     width: 100%;
+  }
+
+  .catalog-title-shadow {
+    display: none;
   }
 }
 
@@ -246,14 +218,14 @@ a:hover {
   text-transform: uppercase;
 }
 
-.catalog-item .wrapper-number {
+.catalog-item .catalog-item-number {
   z-index: 2;
   position: absolute;
   top: 20px;
   left: 10%;
 }
 
-.wrapper-number span {
+.catalog-item-number span {
   display: inline-block;
   background-color: #fff;
   width: 40px;
@@ -290,9 +262,8 @@ a:hover {
   justify-content: center;
   align-items: center;
   gap: 70px;
-  background-color: #3b181e;
   padding-top: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 .promo-block {
@@ -342,9 +313,8 @@ a:hover {
   justify-content: center;
   align-items: center;
   gap: 70px;
-  background-color: #3b181e;
   padding-top: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 
 .portfolio img {
@@ -419,13 +389,13 @@ a:hover {
 /* gift */
 
 .gift {
-  background-color: #3b181e;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .gift-cards {
+  padding-top: 50px;
   flex-wrap: wrap;
-  padding-top: 80px;
-  padding-bottom: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -441,6 +411,7 @@ a:hover {
   gap: 40px;
   max-width: 348px;
   max-height: 574px;
+  padding-bottom: 40px;
 }
 
 .gift-card:hover .gift-card-wrapper {
@@ -510,8 +481,7 @@ a:hover {
 
 .providers {
   padding-top: 80px;
-  padding-bottom: 120px;
-  background-color: #3b181e;
+  padding-bottom: 80px;
 }
 
 .providers-block {
@@ -520,22 +490,34 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   gap: 20px;
 }
 
 .providers-row {
   flex-wrap: wrap;
   display: flex;
-  gap: 20px;
   justify-content: center;
+  gap: 20px;
+}
+
+.providers-row:nth-child(2) img {
+  max-width: 565px;
   width: 100%;
+}
+.providers-row:last-child img {
+  min-width: 272px;
+}
+
+@media (max-width: 700px) {
+  .providers {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 /* footer */
 
 .footer {
-  background-color: #3b181e;
   border-top: 1px solid #676565;
   padding-top: 20px;
   padding-bottom: 50px;
@@ -545,4 +527,17 @@ a:hover {
   display: flex;
   justify-content: center;
   gap: 50px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 700px) {
+  .footer {
+    font-size: 14px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+
+  .footer-list {
+    gap: 20px;
+  }
 }

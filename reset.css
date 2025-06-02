@@ -17,10 +17,17 @@ a,
 a:link,
 a:visited {
   text-decoration: none;
+  color: #fff;
+  transition: color 0.4s ease;
 }
 
 a:hover {
+  color: #b5b0b0;
   text-decoration: none;
+}
+
+button:hover {
+  color: #b5b0b0;
 }
 
 /* Common */
