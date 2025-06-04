@@ -13,18 +13,32 @@
     <title>Floristics</title>
   </head>
   <body>
+    <img class="arrow-scroll" src="./img/arrowTop.svg" alt="arrowTop" />
     <div
       id="banner"
-      style="background-image: url('img/thomas-ae-295NLwGdrKM-unsplash.jpg')"
+      style="
+        background-image: url('./img/Rectangle9.png'),
+          url('img/thomas-ae-295NLwGdrKM-unsplash.jpg');
+      "
     >
+      <div class="modal">
+        <nav class="modal-nav">
+          <a id="services-link" href="/">Услуги</a>
+          <a id="stock-link" href="#">Акции</a>
+          <a id="compositions-link" href="#">Композиции</a>
+          <a id="gift-card-link" href="#">Подарочные карты</a>
+          <a id="partners-link" href="#">Наши партнеры</a>
+          <img class="close-button" src="./img/close.svg" alt="close-button" />
+        </nav>
+      </div>
       <header id="header" class="container">
         <a href="/" class="logo"><img src="./img/лого.svg" alt="logo" /></a>
-        <ul class="header-list">
-          <li><a href="#">Услуги</a></li>
-          <li><a href="#">Акции</a></li>
-          <li><a href="#">Композиции</a></li>
-          <li><a href="#">Подарочные карты</a></li>
-          <li><a href="#">Наши партнеры</a></li>
+        <ul class="header-nav">
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#stock">Акции</a></li>
+          <li><a href="#compositions">Композиции</a></li>
+          <li><a href="#gift-card">Подарочные карты</a></li>
+          <li><a href="#partners">Наши партнеры</a></li>
         </ul>
         <button class="burger-button">
           <img src="./img/burger-icon.svg" alt="burger-button" />
@@ -36,7 +50,7 @@
       </section>
     </div>
     <main class="container">
-      <section class="catalog">
+      <section class="catalog" id="services">
         <h2 class="general-title">Каталог услуг</h2>
         <div class="catalog-list">
           <p class="catalog-title-shadow">Каталог услуг</p>
@@ -156,7 +170,7 @@
           </div>
         </div>
       </section>
-      <section class="promo">
+      <section class="promo" id="stock">
         <div class="promo-block">
           <h3>Акционные предложения</h3>
           <p>
@@ -170,7 +184,7 @@
           alt="promo"
         />
       </section>
-      <section class="portfolio">
+      <section class="portfolio" id="compositions">
         <img src="./img/lizzie-A4YhZ3Fe6rA-unsplash.jpg" alt="promo" />
         <div class="portfolio-block">
           <h3>композиции и шляпные коробки</h3>
@@ -190,7 +204,7 @@
           </div>
         </div>
       </section>
-      <section class="gift">
+      <section class="gift" id="gift-card">
         <h2 class="general-title">Подарочные карты</h2>
         <ul class="gift-cards">
           <li class="gift-card">
@@ -231,7 +245,7 @@
           </li>
         </ul>
       </section>
-      <section class="providers">
+      <section class="providers" id="partners">
         <h2 class="general-title">Наши поставщики</h2>
         <div class="providers-block">
           <div class="providers-row">
@@ -261,5 +275,6 @@
         <li><a href="#">Оформление мероприятий</a></li>
       </ul>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>
